@@ -1,0 +1,16 @@
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.you6878'
+            artifactId = 'cart_manager'
+            version = '1.0.0'
+
+            // AAR 파일을 artifact로 추가
+            artifact(file('libs/manager.aar')) {
+                builtBy tasks.getByPath('assemble')
+            }
+        }
+    }
+}
