@@ -1,16 +1,15 @@
 plugins {
-    id("maven-publish")
+    id 'maven-publish'
 }
 
 publishing {
     publications {
-        create<MavenPublication>("release") {
-            groupId = "com.github.you6878"
-            artifactId = "cart_manager"
-            version = "1.0.0"
+        release(MavenPublication) {
+            groupId = 'com.github.you6878'
+            artifactId = 'cart_manager'
+            version = '1.0.2'
 
-            // AAR 파일 경로
-            artifact(file("libs/manager.aar"))
+            artifact("$projectDir/libs/manager.aar")
         }
     }
 }
