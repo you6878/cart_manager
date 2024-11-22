@@ -7,9 +7,9 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.you6878'
             artifactId = 'cart_manager'
-            version = '1.0.2'
+            version = '1.0.4'
 
-            artifact("$projectDir/libs/manager.aar")
+            artifact("libs/manager.aar")
         }
     }
 }
