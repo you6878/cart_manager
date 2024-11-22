@@ -25,10 +25,9 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.you6878"
             artifactId = "cart_manager"
-            version = "1.0.0"
-
+            version = "1.1.0"
             // AAR 파일 경로
-            artifact(file("$projectDir/libs/cart_manager.aar"))
+            artifact(file("$projectDir/cart_manager.aar"))
         }
     }
 }
